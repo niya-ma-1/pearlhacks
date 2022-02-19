@@ -62,5 +62,3 @@ export const List = () => {
     </div>
   );
 };
-
-
