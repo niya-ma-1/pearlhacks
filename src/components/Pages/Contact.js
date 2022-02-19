@@ -1,13 +1,15 @@
 import { React} from "react";
 import { Form , Row, Col} from "react-bootstrap";
 import Button from 'react-bootstrap/Button';
+import '../Styles.css';
+
 export const Contact = () => {
 
   return (
-    <div style={{paddingLeft: 200, paddingRight: 200}}>
+    <div className="form">
      <Form>
-      <Form.Group style={{fontSize:40}} className="mb-3" controlId="formBasicEmail">
-        <Form.Label size="lg" lg={5}>Email address</Form.Label>
+      <Form.Group className="mb-3" controlId="formBasicEmail">
+        <Form.Label style={{fontSize:40}} size="lg" >Email address</Form.Label>
         <Form.Control size="lg" type="email" placeholder="Enter email" />
       </Form.Group>
 
