@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { Home } from "./components/Pages/Home";
 import { About } from "./components/Pages/About";
 import { List } from "./components/Pages/List";
-import { Contact } from "./components/Pages/Contact";
+import Contact from "./components/Pages/Contact";
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
