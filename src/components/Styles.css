@@ -1,0 +1,22 @@
+.Title1 {
+  color: black;
+  display: "flex";
+  align-items: "center";
+  justify-content: "center";
+  align-self: "center";
+  text-align: center;
+  font-size: 100px;
+}
+.Title2 {
+  color: rgb(247, 0, 255);
+  display: "flex";
+  align-items: "center";
+  text-align: center;
+  justify-content: "center";
+  padding: 5%;
+  font-size: 50px;
+}
+.body{
+    padding: 5%;
+    font-size: 30px;
+}

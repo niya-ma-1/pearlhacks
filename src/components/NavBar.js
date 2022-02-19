@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import "./NavBar.css";
-
+import logo from "../assets/logo.png"
 function NavBar() {
   const [click, setClick] = useState(false);
 
@@ -11,7 +11,7 @@ function NavBar() {
       <nav className="navbar">
         <div className="nav-container" >
           <NavLink exact to="/" className="nav-logo">
-            B-Lottery
+            <img className="logo" src={logo} alt="" style={{height:370, width:400}}/>
           </NavLink>
 
           <ul className={click ? "nav-menu active" : "nav-menu"}>
