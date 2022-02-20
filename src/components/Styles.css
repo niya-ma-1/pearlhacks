@@ -1,3 +1,4 @@
+
 .Title1 {
   color: black;
   display: "flex";
@@ -14,16 +15,20 @@
   text-align: center;
   justify-content: "center";
   padding: 5%;
-  font-size: 50px;
+  font-size: 30px;
 }
 .body{
     padding: 5%;
     font-size: 30px;
+    background-color: #fbfbbc;
+    width: 100vw;
+    height: 100vh;
 }
 
 .form{
     padding-Left: 20%;
     padding-Right: 20%;
+    
 }
 
 .splitScreen {
@@ -37,4 +42,8 @@
 
 .bottomPane {
   width: 50%;
+}
+
+.bg{
+  background-image: './assets/bg.gif';
 }

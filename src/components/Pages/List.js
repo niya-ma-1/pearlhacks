@@ -5,7 +5,9 @@ import '../Styles.css';
 
 export const List = () => {
   return (
-    <div style={{padding:20,}}>
+    <div style={{padding:30, backgroundColor: '#fbfbbc',
+      width: '100vw',
+      height: '100vh'}}>
     <Table striped bordered hover>
     <thead>
       <tr>

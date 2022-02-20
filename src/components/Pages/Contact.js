@@ -53,7 +53,7 @@ function Contact() {
     await signOut(auth);
   };
   return (
-    <div>
+    <div className='body'>
       <div>
           <h4>User Logged In As:</h4>
           <p>{user?.email}</p>
