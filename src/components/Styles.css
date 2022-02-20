@@ -25,3 +25,16 @@
     padding-Left: 20%;
     padding-Right: 20%;
 }
+
+.splitScreen {
+  display: flex;
+  flex-Direction: row;
+}
+
+.topPane {
+  width: 50%;
+}
+
+.bottomPane {
+  width: 50%;
+}

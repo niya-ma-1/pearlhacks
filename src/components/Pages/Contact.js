@@ -8,6 +8,8 @@ import {
   signInWithEmailAndPassword, 
   signOut,} from "firebase/auth";
 import {auth} from './firebase_config';
+import '../Styles.css';
+import Nessie from './Nessie';
 
 function Contact() {
   const [registerEmail, setRegisterEmail] = useState("");
@@ -29,6 +31,7 @@ function Contact() {
         registerPassword
       );
       console.log(user)
+      
     } catch (error) {
       console.log(error.message);
     }
@@ -50,8 +53,17 @@ function Contact() {
     await signOut(auth);
   };
   return (
-    <div className="Contact">
-        <div style={{paddingLeft: 200, paddingRight: 200}}>
+    <div>
+      <div>
+          <h4>User Logged In As:</h4>
+          <p>{user?.email}</p>
+          <Button variant="primary" type="submit" onClick={logout}>
+            Sign out
+          </Button>  
+          {/* <button onClick={logout}> Sign out </button>  */}
+        </div>
+    <div className={'splitScreen'}>
+        <div className={'topPane'} style={{padding:50}}>
           <h3 style={{fontSize:40}}>
             Register
           </h3>
@@ -71,7 +83,7 @@ function Contact() {
               setRegisterPassword(event.target.value);
               }}/>
             </Form.Group>
-            <Button variant="primary" type="submit" onClick={register}>
+            <Button variant="primary" type="submit" onClick={register, Nessie(user?.email)} >
               Register
             </Button>
           </Form>
@@ -86,7 +98,7 @@ function Contact() {
               }}/>
           <button onClick={register}> Create User</button> */}
         </div>
-        <div style={{paddingLeft: 200, paddingRight: 200}}>
+        <div className={'bottomPane'} style={{padding:50}}>
           <h3 style={{fontSize:40}}> Login </h3>
           <Form>
             <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -115,17 +127,10 @@ function Contact() {
           <input placeholder = "Password ..."
             onChange = {(event) => {
               setLoginPassword(event.target.value);
-              }}/>
-          <button onClick={login}> Login</button> */}
+              }}/>*/}
+         
         </div>
-        <div style={{paddingLeft: 200, paddingRight: 200}}>
-          <h4>User Logged In As:</h4>
-          <p>{user?.email}</p>
-          <Button variant="primary" type="submit" onClick={logout}>
-            Sign out
-          </Button>  
-          {/* <button onClick={logout}> Sign out </button>  */}
-        </div>
+    </div>
     </div>
   );
 }
